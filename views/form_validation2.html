@@ -30,7 +30,7 @@
 			<div class="page-title">
 
 				<div class="title-env">
-					<h1 class="title">储蓄业务管理模块</h1>
+					<h1 class="title">账户挂失</h1>
 				</div>
 
 					<div class="breadcrumb-env">
@@ -45,7 +45,7 @@
 								</li>
 							<li class="active">
 
-										<strong>储蓄业务管理模块</strong>
+										<strong>账户管理模块</strong>
 								</li>
 								</ol>
 
@@ -56,7 +56,7 @@
 
 				<div class="panel-heading">
 					<div class="panel-title">
-						新增存款
+						账户挂失
 					</div>
 				</div>
 
@@ -75,55 +75,23 @@
 						</div>
 
 						<div class="form-group">
-							<label class="control-label">姓名</label>
+							<label class="control-label">证件类型</label>
 
-							<input type="text" class="form-control" name="username" data-validate="required"  />
+							<input type="text" class="form-control" name="username" data-validate="required" placeholder="身份证" disabled/>
 						</div>
 						<div class="form-group">
 							<label class="control-label">身份证号</label>
 
 							<input id="idCard" type="text" class="form-control" name="creditcard" onchange="IdentityCodeValid($('#idCard').val())" data-validate="required"  />
 						</div>
-						<div class="form-group">
-							<label class="control-label">储蓄类型</label>
 
-							<select class="form-control">
-								<option>活期储蓄</option>
-								<option>整存整取定期储蓄</option>
-								<option>零存整取定期储蓄存款</option>
-								<option>存本取息定期储蓄存款</option>
-								<option>整存零取定期储蓄存款</option>
-								<option>定活两便储蓄存款</option>
-							</select>
 
-						</div>
+
+
 
 						<div class="form-group">
-							<label class="control-label">资金总额</label>
-
-							<input type="text" class="form-control" name="address" data-validate="required"  />
-						</div>
-						<div class="form-group">
-							<label class="control-label">币种</label>
-
-							<select class="form-control">
-								<option>人民币</option>
-								<option>美元</option>
-								<option>港币</option>
-								<option>日元</option>
-								<option>欧元</option>
-								<option>英镑</option>
-								<option>瑞士法郎</option>
-								<option>澳大利亚元</option>
-								<option>新加坡元</option>
-								<option>加拿大元</option>
-							</select>
-
-						</div>
-
-						<div class="form-group">
-							<button type="submit" class="btn btn-success">保存</button>
-							<button type="reset" class="btn btn-white">重置</button>
+							<button type="submit" class="btn btn-success">确认挂失</button>
+							<button type="reset" class="btn btn-white">取消挂失</button>
 						</div>
 
 					</form>

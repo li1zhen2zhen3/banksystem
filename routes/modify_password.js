@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: '主页' });
+    res.render('modify_password', { title: '修改密码' });
 });
 
 module.exports = router;

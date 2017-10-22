@@ -9,9 +9,11 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var home = require('./routes/home');
 var nav = require('./routes/nav');
-var form_validation=require('./routes/form_validation');
+var tables_datatables=require('./routes/tables_datatables');
 var forms_advanced=require('./routes/forms_advanced');
-
+var form_validation=require('./routes/form_validation');
+var form_validation2=require('./routes/form_validation2');
+var modify_password=require('./routes/modify_password');
 var app = express();
 //转发代理
 var proxy = require('express-http-proxy');
@@ -22,7 +24,7 @@ var apiProxy = proxy("localhost:8080",{
 })
 app.use('/user/login',apiProxy);
 app.use('/saving/accountList',apiProxy);
-
+app.use('/saving/addDeposit',apiProxy);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,7 +44,10 @@ app.use('/users', users);
 app.use('/home',home);
 app.use('/nav',nav);
 app.use('/form_validation',form_validation);
+app.use('/form_validation2',form_validation2);
+app.use('/tables_datatables',tables_datatables);
 app.use('/forms_advanced',forms_advanced);
+app.use('/modify_password',modify_password);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

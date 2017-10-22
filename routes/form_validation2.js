@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: '主页' });
+    res.render('form_validation2', { title: '储蓄管理模块' });
 });
 
 module.exports = router;
