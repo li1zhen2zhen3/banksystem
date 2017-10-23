@@ -51,15 +51,15 @@
 
                                 $("#example-3").dataTable({
                                     "ajax": {
-                                        "url": "/data/ajax.txt"
+                                        "url": "/saving/accountList"
                                     },
                                     columns: [
-                                        {"data": "name"},
-                                        {"data": "position"},
-                                        {"data": "office"},
-                                        {"data": "extn"},
-                                        {"data": "start_date"},
-                                        {"data": "salary"}
+                                        {"data": "accounttype"},
+                                        {"data": "address"},
+                                        {"data": "balance"},
+                                        {"data": "username"},
+                                        {"data": "password"},
+                                        {"data": "status"}
                                     ],
                                 }).yadcf([
                                     {column_number: 0, filter_type: 'text'},
