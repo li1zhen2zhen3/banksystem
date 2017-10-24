@@ -62,7 +62,7 @@
 
 				<div class="panel-body">
 
-					<form role="form" id="form1" method="post" class="validate">
+					<form role="form" id="form1" method="post" class="validate" id="sign">
 						<div class="form-group">
 							<label class="control-label">账号类型</label>
 
@@ -120,7 +120,11 @@
 							</select>
 
 						</div>
+						<div class="form-group">
+							<label class="control-label">存款期限</label>
 
+							<input id="saveDeadLine" type="text" class="form-control" name="saveDeadLine" data-validate="required"  />
+						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-success">保存</button>
 							<button type="reset" class="btn btn-white">重置</button>
@@ -201,6 +205,32 @@
             return false;
         }
     }
+        $('#sign').submit(function() {
+                var AjaxURL= "/saving/addDeposit";
+                alert($('#sign').serialize());
+
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: AjaxURL,
+                    data: JSON.stringify($('#sign').serializeArray()),
+                    success: function (data) {
+                        if(data.success){
+                            var strresult=data;
+                            alert("存款成功："+strresult);
+                        }else{
+                            alert("存款失败:"+data.responseText);
+                        }
+                    },
+                    error: function(data) {
+                        alert("error:"+data.responseText);
+                    }
+                });
+            }
+        );
+
+
+
 	</script>
 
 </body>

@@ -306,7 +306,7 @@
                     type: "POST",
                     dataType: "json",
                     url: AjaxURL,
-                    data: $('#sign').serialize(),
+                    data: JSON.stringify($('#sign').serializeArray()),
                     success: function (data) {
                         if(data.success){
                             var strresult=data;
