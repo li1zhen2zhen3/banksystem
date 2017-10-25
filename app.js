@@ -25,6 +25,7 @@ var apiProxy = proxy("localhost:8080",{
 app.use('/user/login',apiProxy);
 app.use('/saving/accountList',apiProxy);
 app.use('/saving/addDeposit',apiProxy);
+app.use('/saving/loseReport',apiProxy);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

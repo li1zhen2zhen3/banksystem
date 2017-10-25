@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="/assets/css/xenon-skins.css">
 	<link rel="stylesheet" href="/assets/css/custom.css">
 
-	<script src="/assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
 
 
 	
@@ -51,15 +51,16 @@
 
                                 $("#example-3").dataTable({
                                     "ajax": {
-                                        "url": "/data/ajax.txt"
+                                        "url": "/saving/savingList"
                                     },
                                     columns: [
-                                        {"data": "name"},
-                                        {"data": "position"},
-                                        {"data": "office"},
-                                        {"data": "extn"},
-                                        {"data": "start_date"},
-                                        {"data": "salary"}
+                                        {"data": "accountType"},
+                                        {"data": "username"},
+                                        {"data": "IDcard"},
+                                        {"data": "busenessId"},
+                                        {"data": "saveMoney"},
+                                        {"data": "cashType"},
+                                        {"data": "saveDeadLine"}
                                     ],
                                 }).yadcf([
                                     {column_number: 0, filter_type: 'text'},
@@ -77,6 +78,7 @@
 								<th>储蓄类型</th>
 								<th>资金总额</th>
 								<th>币种</th>
+								<th>存款期限</th>
 							</tr>
 						</thead>
 					</table>

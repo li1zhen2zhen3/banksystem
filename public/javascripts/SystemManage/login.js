@@ -1,4 +1,5 @@
 function login(){
+    alert("sdfds");
     var host = window.location.host;
     //获取主机
     var url = "user/login";
